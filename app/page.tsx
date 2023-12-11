@@ -1,6 +1,6 @@
 import Link from "next/link";
-import postgres from "postgres";
 import { Suspense } from "react";
+import postgres from "postgres";
 
 const sql = postgres(process.env.DATABASE_URL!);
 
@@ -15,7 +15,7 @@ async function Quizzes() {
   return (
     <ul>
       {quizzes.map((quiz) => (
-        <li key={quiz.quiz_id}>
+        <li key={quiz.quiz_id} className="underline">
           <Link href={`/quiz/${quiz.quiz_id}`}>{quiz.quiz_title}</Link>
         </li>
       ))}
