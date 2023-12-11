@@ -26,7 +26,7 @@ async function Quizzes() {
 export default function Home() {
   return (
     <section>
-      <h1>All Quizzes</h1>
+      <h1 className="font-2xl font-semibold text-blue-700">All Quizzes</h1>
       <Suspense fallback={<p>Loading...</p>}>
         <Quizzes />
       </Suspense>
